@@ -4,7 +4,7 @@ agent any
 stages{
    stage('Build Application'){
       steps{
-        sh 'mvn clean package'
+        sh 'mvn -f mavenproject/pom.xml clean package'
       }
       posts{
 
