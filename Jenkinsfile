@@ -24,7 +24,7 @@ stages
   {
     steps
     {
-      copyArtifacts filter:'**/*.war', projectName: 'Package_Application_Code_Pipeline'
+      copyArtifacts filter:'**/*.jar', projectName: 'Package_Application_Code_Pipeline'
     }
   } 
 }
