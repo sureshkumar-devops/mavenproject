@@ -32,7 +32,7 @@ stages
   {
     steps
     {
-      copyArtifacts: '**/*.war'
+      copyArtifacts(filter:'*', projectName: 'Package_Application_Code_Pipeline', selector: lastSuccessful())
     }
   }
   stage('Deploy to prod')
