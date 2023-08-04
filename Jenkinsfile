@@ -32,7 +32,8 @@ stages
     steps
     {
         
-      deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', jar: '**/*.jar'
+      
+      deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', onFailure: false, war: '**/*.jar'
     }
   }
  
