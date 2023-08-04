@@ -7,6 +7,12 @@ triggers
 }
 stages
 {
+  stage("Git Checkout")
+  {
+      steps{
+            git 'https://github.com/sureshkumar-devops/mavenproject.git'
+           }
+  }
   stage('Build')
   {
     steps
@@ -22,11 +28,11 @@ stages
       }
     }
   }
-  stage('Deploy to Staging Env')
+  stage('Copy Artifacts')
   {
     steps
     {
-      copyArtifacts filter: '**/*.war', projectName: 'Package_Application_Code_Pipeline'
+      copyArtifacts: '**/*.war'
     }
   }
   stage('Deploy to prod')
@@ -36,6 +42,3 @@ stages
       deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', war: '**/*.war'
     }
   }
- 
-}
-}
