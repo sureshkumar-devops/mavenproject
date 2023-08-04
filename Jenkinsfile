@@ -17,15 +17,14 @@ stages
   {
     steps
     {
-        sh 'mvn -f pom.xml clean package'
-        archiveArtifacts artifacts: '**/*.war', caseSensitive: false, onlyIfSuccessful: true
+        sh 'mvn -f pom.xml clean package'        
     }    
   }
   stage('Copy Artifacts')
   {
     steps
     {
-      copyArtifacts filter:'**/*.jar', projectName: 'Package_Application_Code_Pipeline'
+      copyArtifacts filter:'**/*.war', projectName: 'Package_Application_Code_Pipeline'
     }
   } 
 }
