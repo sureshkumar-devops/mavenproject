@@ -24,7 +24,7 @@ stages
       success
       {
       echo 'Package of Artifacts...'
-      archiveArtifacts artifacts: '**/*.jar'
+      archiveArtifacts artifacts: '**/*.war'
       }
     }
   }
