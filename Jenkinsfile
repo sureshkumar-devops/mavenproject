@@ -27,6 +27,14 @@ stages
       copyArtifacts filter: '**/*.jar', projectName: 'Package_Application_Code_Pipeline'
     }
   }
+ stage('Deploy to prod')
+  {
+    steps
+    {
+        
+      deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', jar: '**/*.jar'
+    }
+  }
  
 }
 }
