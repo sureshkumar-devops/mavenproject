@@ -11,7 +11,7 @@ stages
   {
     steps
     {
-      sh mvn -f pom.xml 'clean package'  
+      sh 'mvn -f pom.xml clean package'  
     }
     post
     {
