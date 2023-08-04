@@ -18,16 +18,16 @@ stages
     steps
     {
         sh 'mvn -f pom.xml clean package'
-    }
-    post
-    {
-      success
-      {
-      echo 'Package of Artifacts...'
-      archiveArtifacts artifacts: '**/*.war'
-      }
-    }
+    }    
   }
+ stage('archiveArtifacts')
+ {
+  steps
+  {
+       archiveArtifacts artifacts: '**/*.war'
+  }
+  
+ }
   stage('Copy Artifacts')
   {
     steps
