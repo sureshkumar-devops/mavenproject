@@ -20,15 +20,6 @@ stages
         sh 'mvn -f pom.xml clean package'
     }    
   }
- stage('archiveArtifacts')
- {
-  steps
-  {
-       
-   archiveArtifacts artifacts: '**/*.war', caseSensitive: false, onlyIfSuccessful: true
-  }
-  
- }
   stage('Copy Artifacts')
   {
     steps
