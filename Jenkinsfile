@@ -24,7 +24,8 @@ stages
  {
   steps
   {
-       archiveArtifacts artifacts: '**/*.war'
+       
+   archiveArtifacts artifacts: '**/*.war', caseSensitive: false, onlyIfSuccessful: true
   }
   
  }
