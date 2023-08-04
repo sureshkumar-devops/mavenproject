@@ -24,7 +24,7 @@ stages
       success
       {
       echo 'Package of Artifacts...'
-      archiveArtifacts artifacts: '**/*.war'
+      archiveArtifacts artifacts: '**/*.jar'
       }
     }
   }
@@ -39,7 +39,7 @@ stages
   {
     steps
     {
-      deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', war: '**/*.war'
+      deploy adapters: [tomcat9(credentialsId: 'tomcat-id', path: '', url: 'http://34.23.164.52:9090/')], contextPath: '/', jar: '**/*.jar'
     }
   }
 }
