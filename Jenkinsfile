@@ -18,6 +18,7 @@ stages
         success
         {
             echo "Now Archiving the Artifacts...."
+            archiveArtifacts artifacts: '**/*.jar'
            
         }
     }
