@@ -24,7 +24,7 @@ stages
   {
     steps
     {
-      copyArtifacts filter: '**/*.jar', projectName: 'Package_Application_Code_Pipeline'
+      copyArtifacts '**/*.jar', projectName: 'Package_Application_Code_Pipeline'
     }
   }
  stage('Deploy to prod')
