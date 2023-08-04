@@ -24,7 +24,7 @@ stages
   {
     steps
     {
-      copyArtifacts: '**/*.war', projectName: 'Package_Application_Code_Pipeline'
+      copyArtifacts:'**/*.war', projectName: 'Package_Application_Code_Pipeline'
     }
   }
  stage('Deploy to prod')
