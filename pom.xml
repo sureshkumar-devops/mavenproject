@@ -42,7 +42,7 @@
                       <!-- Build an executable WAR -->  
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
-            <version>${maven.war.plugin.version}</version>
+           <version>3.1.0</version>  
             <configuration>
                      <archive>  
                     <manifest>  
@@ -54,19 +54,7 @@
 
              
              
-      <plugin>  
-            <!-- Build an executable JAR -->  
-            <groupId>org.apache.maven.plugins</groupId>  
-            <artifactId>maven-jar-plugin</artifactId>  
-            <version>3.1.0</version>  
-            <configuration>  
-                <archive>  
-                    <manifest>  
-                        <mainClass>com.example.Greeter</mainClass>  
-                    </manifest>  
-                </archive>  
-            </configuration>  
-        </plugin> 
+     
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
