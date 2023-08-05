@@ -36,7 +36,24 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-      
+
+
+             <plugin>
+                      <!-- Build an executable WAR -->  
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>${maven.war.plugin.version}</version>
+            <configuration>
+                     <archive>  
+                    <manifest>  
+                        <mainClass>com.example.Greeter</mainClass>  
+                    </manifest>  
+                
+            </configuration>
+        </plugin>
+
+             
+             
       <plugin>  
             <!-- Build an executable JAR -->  
             <groupId>org.apache.maven.plugins</groupId>  
