@@ -173,4 +173,8 @@
     </dependency>
   </dependencies>
 
+         <prerequisites>
+    <maven>3.6.3</maven>
+  </prerequisites>
+
 </project>
